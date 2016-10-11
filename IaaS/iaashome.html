@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<title>IAAS-HOME</title>
+<link href="iaashome.css"  rel="stylesheet"> 
+</head>
+
+<body>
+<div id="header">
+	<div class="header_top">
+		<div class="wrap">
+			<div class="logo">
+				<a href=""><img src="http://192.168.208.134/cloudonfire/images/logo1.jpeg" width="200" height="300"/></a>					
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="http://192.168.208.134/cloudonfire/services/services.html">HOME</a></li>
+					<li><a href="http://192.168.208.134/cloudonfire/saasn.html">SAAS</a></li>
+					<li><a href="http://192.168.208.134/cloudonfire/stass.html">STAAS</a></li>
+					<li><a href="http://192.168.208.134/cloudonfire/iaashome.html" id="cur">IAAS</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<br/><br/>
+<div class="content">
+	<div class="content_top">
+		<p>CHOOSE YOUR OWN CLOUD</p>
+	</div>
+	<div class="content_im">
+	<img src="http://192.168.208.134/cloudonfire/images/system.jpeg" />
+	</div>
+	
+	<div class="content_form">
+		<form  action="http://192.168.208.134/cgi-bin/iaashome.py">
+		OS-Name	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;:&nbsp; <input type="text" name="nam" ><br/><br/>
+		OS-variant  	&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  :&nbsp;&nbsp;<select name="variant">
+		<option>RHEL-6.4</option>
+		<option>Backtrack-5</option>
+		</select><br/><br/>
+		RAM   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" name="ram" placeholder="IN MB"><br/><br/>
+		DISK SPACE	&nbsp; :&nbsp; <input type="text" name="size"  placeholder="IN GB"><br/><br/>
+		CPU		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 			&nbsp;<input type="text" name="cpu" ><br/><br/>
+		&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp<input type="submit" value="START NOW" 			id="bt"/>
+		</form>
+
+	</div>
+</div>
+
+</body>
+
+</html>
