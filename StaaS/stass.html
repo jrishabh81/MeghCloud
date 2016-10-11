@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<title>STAAS</title>
+<link href="stass.css"  rel="stylesheet" /> 
+<script>
+function xclose()
+{
+q=document.getElementById("pop-up");
+q.style.visibility="hidden";
+}
+
+
+function yclose()
+{
+q=document.getElementById("pop-up-bs");
+q.style.visibility="hidden";
+}
+
+function popupbox()
+{
+q=document.getElementById("pop-up");
+q.style.visibility="visible";
+r=document.getElementById("main");
+r.style.opacity="5%";
+}
+
+function popupbs()
+{
+q=document.getElementById("pop-up-bs");
+q.style.visibility="visible";
+r=document.getElementById("main");
+r.style.opacity="0%";
+}
+
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		$("#b12").click(function() {
+			$("#pop-up").dialog({
+				title: "my dialog box",
+				width: 500,
+				height: 200,
+				modal:true,
+				buttons: {
+					Close:
+					function(){
+					$(this).dialog('close');
+					}
+				}
+				});
+			});
+		})
+
+	$(function(){
+		$("#b13").click(function() {
+			$("#pop-up-bs").dialog({
+				title: "my dialog box",
+				width: 500,
+				height: 200,
+				modal:true,
+				buttons: {
+					Close:
+					function(){
+					$(this).dialog('close');
+					}
+				}
+				});
+			});
+		});
+
+
+
+
+</script>
+
+</head>
+
+<body>
+<div id="main">
+<div id="header">
+	<div class="header_top">
+		<div class="wrap">
+			<div class="logo">
+				<a href=""><img src="http://192.168.208.134/cloudonfire/images/logo1.jpeg" width="200" height="300"/></a>					
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="http://192.168.208.134/cloudonfire/services/services.html">HOME</a></li>
+					<li><a href="http://192.168.208.134/cloudonfire/saasn.html">SAAS</a></li>
+					<li><a href="http://192.168.208.134/cloudonfire/stass.html" id="cur">STAAS</a></li>
+					<li><a href="http://192.168.208.134/cloudonfire/iaashome.html">IAAS</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
+<div id="content_top" >
+	<img src="http://192.168.208.134/cloudonfire/images/sbox1.jpeg"></br>
+	<div id="c1"><p>We provides secure, durable, highly-scalable object storage.Our products are easy to use, with a simple web services interface to 		store and retrieve any amount of data from anywhere on the web.You pay only for the storage you actually use. There is no minimum fee and no setup 		cost. We provides cost-effective storage for a wide variety of use cases including cloud applications, content distribution, backup.</br>
+	We provides storage in two forms: <i>OBJECT STORAGE </i>and <i>BLOCK STORAGE</i></p>
+	</div>
+</div>
+<br/>
+
+
+<div id="content_bottom_right">
+<p>
+<strong><i>With S-DISK</i></strong> product of our cloud you can get <b><i>block storage</i></b> You can create partitions in this kinda storage which is not possible in object storage.S-Disk provides high availability and durability with  consistent and low-latency performance needed to run your workloads.
+S-Disk is cost effiecient and easy to use.
+</p>
+<form>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="GET S-DISK" class="but" id="b13" onmouseover="popupbs()"/>
+</form>
+</div>
+
+<div id="content_bottom_left">
+<p>
+<strong><i>FREEPACK</i></strong>  product of our cloud gives you <b><i>object storage</i></b> which you can access from anywhere.Our Cloud Storage allows world-wide storage and retrieval of any amount of data and at any time. It provides a simple programming interface which enables users to take advantage of our own reliable infrastructure to perform data operations in a simple manner.
+</p>
+
+<form>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="GET FREEPACK" class="but"  onmouseover="popupbox()" id="b12" />
+
+</form>
+</div>
+</div>
+
+<div id="pop-up">
+<img src="http://192.168.208.134/cloudonfire/images/cross1.png" onClick="xclose()" id="i1"/>
+<form action="http://192.168.208.134/cgi-bin/objectstorage.py" id="f1">
+Enter size (in GB): <br/><input type="text" name="size" id="s1" /><br/>
+<input type="submit" value="Submit" id="b1"/>
+</form>
+<form id="f2" action="http://192.168.208.134/cgi-bin/extendobjectstorage.py">
+To extend ,enter size (in GB):
+<input type="text" name="size" id="s1" /><br/>
+<input type="submit" value="Submit" id="b1"/>
+</form>
+</div>
+
+
+<div id="pop-up-bs">
+<img src="http://192.168.208.134/cloudonfire/images/cross1.png" onclick="yclose()" id="i1"/>
+<form action="http://192.168.208.134/cgi-bin/blockstorage.py" id="f1">
+Enter size (in GB):<input type="text" name="size" id="s1" /><br/>
+<input type="submit" value="Submit" id="b1"/>
+</form>
+<!--<form id="f2" action="http://192.168.208.134/cgi-bin/extendblockstorage.py">
+To extend ,enter size (in GB):
+<input type="text" name="size" id="s1" /><br/>
+<input type="submit" value="Submit" id="b1"/>
+</form>-->
+</div>
+
+
+</body>
+</html>
